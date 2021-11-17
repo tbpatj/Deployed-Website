@@ -1,0 +1,28 @@
+body, header, head, html{
+    margin:0px;
+    padding:0px;
+}
+#main{
+    position: relative;
+}
+#background-img{
+    width: 100vw;
+    height: 800px;
+    position: absolute;
+    z-index: -1;
+}
+#background-container{
+    position: relative;
+    display: flex;
+}
+#content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 800px;
+}
+#head-container{
+    display:flex;
+    justify-content: center;
+}
