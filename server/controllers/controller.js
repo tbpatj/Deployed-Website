@@ -13,6 +13,6 @@ module.exports = {
     test: (req,res) => {
         rollbar.log("yup hit me");
         console.log("yeah boy");
-        res.status(200).send("yeah you hit em");
+        res.status(200).send("yeah you hit em")
     }
 }
