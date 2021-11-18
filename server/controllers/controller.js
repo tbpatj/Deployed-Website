@@ -1,10 +1,13 @@
-const Rollbar = require("rollbar");
-const rollbar = new Rollbar({
-  accessToken: 'e52add0a647d4556a072c2b6b52cbf86',
+// include and initialize the rollbar library with your access token
+var Rollbar = require("rollbar");
+var rollbar = new Rollbar({
+  accessToken: 'f921e592eb454a14bce289f925ddfd90',
   captureUncaught: true,
   captureUnhandledRejections: true
 });
 
+// record a generic message and send it to Rollbar
+rollbar.log("Hello world!");
 
 module.exports = {
     test: (req,res) => {
