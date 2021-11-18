@@ -14,7 +14,7 @@ function sendRequest( event ){
     .then(res => {
         console.log(res);
     })
-    .catch(err => console.log(error));
+    .catch(error => console.log(error));
 }
 
 function addNavClass(event){
