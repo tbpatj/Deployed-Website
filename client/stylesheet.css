@@ -1,6 +1,12 @@
-body, header, head, html{
+body, header, head, html, nav{
     margin:0px;
     padding:0px;
+}
+nav {
+    position:sticky;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
 }
 #main{
     position: relative;
@@ -25,4 +31,78 @@ body, header, head, html{
 #head-container{
     display:flex;
     justify-content: center;
+}
+
+/* Nav bar styling */
+/* <div id="nav-bttn">
+            <div id="nav-bar-1"></div>
+            <div id="nav-bar-2"></div>
+            <div id="nav-bar-3"></div>
+        </div> */
+nav{
+    position: relative;
+}
+
+
+#nav-bttn{
+    z-index: 1;
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+#nav-bttn:hover {
+    background-color:azure;
+}
+#nav-bttn:hover *{
+    background-color: black;
+}
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    transform: translate(5px,5px);
+}
+.icon-link{
+    width:40px;
+    height:40px;
+    background-color: rgb(208, 208, 208);
+    border-radius: 10px;
+}
+
+#nav-bar-1, #nav-bar-2, .nav-bar-3{
+    position:absolute;
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    transition: 0.5s;
+}
+#nav-bar-1{
+    transform: translateY(10px);
+}
+#nav-bar-2{
+}
+.nav-bar-3{
+    transform: translateY(-10px);
+}
+#nav-container{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    transition: 1s;
+    overflow: hidden;
+}
+.nav-container{
+    position:absolute;
+    z-index: 2;
+    transform: translateX(50px);
+    background-color: azure;
+    width:100vw;
+    height:0px;
+}
+.display-nav{
+    height:50px;
+   
 }
