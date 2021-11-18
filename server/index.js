@@ -9,7 +9,7 @@ const port = process.env.PORT || 4005;
 
 //Rollbar implementation for tracablitly
 
-const {test} = require('./controllers/controller');
+const {test,crit,warning} = require('./controllers/controller');
 //get the html file when someone pings the direct endpoint
 app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'));
@@ -17,6 +17,9 @@ app.get('/', (req,res) => {
 });
 
 app.get('/hitem',test);
+
+app.get('/criticalErr',crit);
+app.get('/warning',warning);
 //send back the js and css files for the html main file
 app.use('/js', express.static(path.join(__dirname, '../client/main.js')))
 app.use('/css', express.static(path.join(__dirname, '../client/stylesheet.css')));

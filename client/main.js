@@ -2,22 +2,35 @@ let navBttn = document.getElementById("nav-bttn");
 let navCntn = document.getElementById("nav-container");
 let navBar = document.getElementById("nav-bar-3");
 let testBttn = document.getElementById('test-bttn');
-testBttn.addEventListener('click', sendRequest)
+let testBttn2 = document.getElementById('testBoy');
+let testBttn3 = document.getElementById('crit');
+testBttn.addEventListener('click', sendRequest);
+testBttn2.addEventListener('click', sendWarning);
+testBttn3.addEventListener('click', sendCrit);
 navBar.addEventListener("transitionend",createAnimation);
 
 navBttn.addEventListener("click",addNavClass);
 let toggledNav = false;
 
 function sendRequest( event ){
-    console.log('hit em');
     axios
-    .get('/hitem')
-    .then(res => {
-        console.log(res);
-        console.log('hit em');
-    })
-    .catch(error => console.log(error));
-    
+    .get('/hitem').then(res => {
+
+    }).catch(error => console.log(error));
+}
+
+function sendCrit( event ){
+    axios
+    .get('/criticalErr').then(res => {
+
+    }).catch(error => console.log(error))
+}
+
+function sendWarning( event ){
+    axios
+    .get('/warning').then(res => {
+
+    }).catch(error => console.log(error));
 }
 
 function addNavClass(event){

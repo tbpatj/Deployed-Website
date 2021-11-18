@@ -14,5 +14,13 @@ module.exports = {
         rollbar.log("yup hit me");
         console.log("yeah boy");
         res.status(200).send("yeah you hit em")
+    },
+    crit: (req,res) => {
+        rollbar.critical("oh nos");
+        res.status(200).send("dats no gud")
+    },
+    warning: (req, res) => {
+        rollbar.warning("ooooo zoinks, like we got a warning");
+        res.status(200).send("thanks for the heads up");
     }
 }
