@@ -9,12 +9,15 @@ navBttn.addEventListener("click",addNavClass);
 let toggledNav = false;
 
 function sendRequest( event ){
+    console.log('hit em');
     axios
     .get('/hitem')
     .then(res => {
         console.log(res);
+        console.log('hit em');
     })
     .catch(error => console.log(error));
+    
 }
 
 function addNavClass(event){
