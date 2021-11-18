@@ -68,7 +68,6 @@ nav{
 .icon-link{
     width:40px;
     height:40px;
-    background-color: rgb(208, 208, 208);
     border-radius: 10px;
 }
 
@@ -84,14 +83,23 @@ nav{
 }
 #nav-bar-2{
 }
+
 .nav-bar-3{
     transform: translateY(-10px);
+}
+.nav-bar-anim{
+    transform: translateX(-25px) rotate(90deg);
+}
+.nav-bar-anim2{
+    height:100px;
+    width:50px;
+    transform: translateX(-25px) rotate(90deg);
 }
 #nav-container{
     display: flex;
     justify-content:space-around;
     align-items: center;
-    transition: 1s;
+    transition: 1s ease-out;
     overflow: hidden;
 }
 .nav-container{
@@ -99,10 +107,10 @@ nav{
     z-index: 2;
     transform: translateX(50px);
     background-color: azure;
-    width:100vw;
-    height:0px;
+    width:0px;
+    height:50px;
 }
 .display-nav{
-    height:50px;
+    width:100vw;
    
 }
